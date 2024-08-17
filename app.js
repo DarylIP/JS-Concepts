@@ -138,3 +138,46 @@ human._proto_._proto_;
 
 //Recommended way tp get the prototype
 Object.getPrototypeOf(human);
+
+// Object-Oriented Programming (OOP) in JavaScript is a programming paradigm that uses "objects" to design and structure software. It revolves around the concept of objects, which can contain both data and methods. JavaScript supports OOP principles and provides several ways to implement them.
+
+// Here are some key concepts of OOP in JavaScript:
+
+// Objects: The basic building blocks in OOP. In JavaScript, objects are collections of key-value pairs. Each key is a property name, and each value can be any data type, including functions (methods).
+const person = {
+  name: "Alice",
+  age: 30,
+  greet: function () {
+    console.log("Hello, " + this.name);
+  },
+};
+
+// Classes: JavaScript introduced classes in ECMAScript 6 (ES6). A class is a blueprint for creating objects with shared properties and methods. You can create instances of a class using the new keyword.
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  greet() {
+    console.log("Hello, " + this.name);
+  }
+}
+
+const alice = new Person("Alice", 30);
+alice.greet(); // Output: Hello, Alice
+
+//Inheritance: This allows one class to inherit properties and methods from another. In JavaScript, this is achieved using the extends keyword.
+class Employee extends Person {
+  constructor(name, age, jobTitle) {
+    super(name, age); // Call the parent class constructor
+    this.jobTitle = jobTitle;
+  }
+
+  describe() {
+    console.log(`${this.name} is a ${this.jobTitle}`);
+  }
+}
+
+const bob = new Employee("Bob", 40, "Developer");
+bob.describe(); // Output: Bob is a Developer
