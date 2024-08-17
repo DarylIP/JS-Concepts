@@ -181,3 +181,46 @@ class Employee extends Person {
 
 const bob = new Employee("Bob", 40, "Developer");
 bob.describe(); // Output: Bob is a Developer
+
+// In JavaScript, arrays are a fundamental data structure used to store ordered collections of values. Arrays are versatile and can hold items of any data type, including other arrays or objects. They come with a wide range of built-in methods that allow for various operations like adding, removing, and manipulating elements.
+
+// Here’s a detailed overview of JavaScript arrays:
+
+// 1. Creating Arrays
+// You can create arrays in several ways:
+
+// Using Array Literals: This is the most common way to create arrays.
+const fruits = ["apple", "banana", "cherry"];
+
+//Using the Array Constructor:
+const numbers = new Array(1, 2, 3, 4);
+const emptyArray = new Array(5); // Creates an array with 5 undefined elements
+
+//2. Accessing Array Elements
+//Array elements are accessed using zero-based indices:
+const firstFruit = fruits[0]; // 'apple'
+const secondFruit = fruits[1]; // 'banana'
+
+// 3. Array Methods
+// JavaScript arrays come with many built-in methods for various operations:
+
+// Adding/Removing Elements:
+fruits.push("date"); // Adds 'date' to the end
+fruits.unshift("apricot"); // Adds 'apricot' to the beginning
+fruits.pop(); // Removes the last element ('date')
+fruits.shift(); // Removes the first element ('apricot')
+
+// Finding Elements:
+const index = fruits.indexOf("banana"); // Returns the index of 'banana'
+const found = fruits.includes("cherry"); // Checks if 'cherry' is in the array
+
+// Manipulating Arrays:
+fruits.reverse(); // Reverses the order of elements
+fruits.sort(); // Sorts elements (alphabetically by default)
+
+// Transforming Arrays:
+const upperCaseFruits = fruits.map((fruit) => fruit.toUpperCase()); // Transforms each element
+const filteredFruits = fruits.filter((fruit) => fruit.length > 5); // Filters based on a condition
+
+// Reducing Arrays:
+const totalLength = fruits.reduce((total, fruit) => total + fruit.length, 0); // Accumulates values
